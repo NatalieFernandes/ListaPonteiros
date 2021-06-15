@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+    char vet1[4]; //1 byte
+    short  vet2[4]; // 2 bytes
+    int vet3[4]; // 4 bytes
+    long long vet4[4]; // 8 bytes
+
+    int i;
+    printf("\n x for declarado como char");
+     printf("\n endereco da posicao x = %d", vet1);
+     printf("\n endereco da posicao x+1 = %d", vet1+1);
+      printf("\n endereco da posicao x+2 = %d", vet1+2);
+       printf("\n endereco da posicao x+3 = %d", vet1+3);
+
+
+    printf("\n x for declarado como int");
+     printf("\n endereco da posicao x = %d", vet2);
+     printf("\n endereco da posicao x+1 = %d", vet2+1);
+      printf("\n endereco da posicao x+2 = %d", vet2+2);
+       printf("\n endereco da posicao x+3 = %d", vet2+3);
+
+    printf("\n x for declarado como float");
+     printf("\n endereco da posicao x = %d", vet3);
+     printf("\n endereco da posicao x+1 = %d", vet3+1);
+      printf("\n endereco da posicao x+2 = %d", vet3+2);
+      printf("\n endereco da posicao x+3 = %d", vet3+3);
+
+    printf("\n x for declarado como double");
+    printf("\n endereco da posicao x = %d", vet4);
+     printf("\n endereco da posicao x+1 = %d", vet4+1);
+      printf("\n endereco da posicao x+2 = %d", vet4+2);
+       printf("\n endereco da posicao x+3 = %d", vet4+3);
+
+    return 0;
+   }
+
+// saída:
+//x for declarado como char
+//endereco da posicao x = 6422044
+//endereco da posicao x = 6422045
+//endereco da posicao x = 6422046
+//endereco da posicao x = 6422047
+//x for declarado como int
+//endereco da posicao x = 6422036
+//endereco da posicao x = 6422038
+//endereco da posicao x = 6422040
+//endereco da posicao x = 6422042
+//x for declarado como float
+//endereco da posicao x = 6422016
+//endereco da posicao x = 6422020
+//endereco da posicao x = 6422024
+//endereco da posicao x = 6422028
+//x for declarado como double
+//endereco da posicao x = 6421984
+//endereco da posicao x = 6421992
+//endereco da posicao x = 6422000
+//endereco da posicao x = 6422008

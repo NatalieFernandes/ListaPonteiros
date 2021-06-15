@@ -1,0 +1,19 @@
+int main(){
+  int vet[] = {4,9,13};
+  int i;
+  for(i=0;i<3;i++){
+  printf("%d ",*(vet+i));
+  }
+}
+
+//O código acima retorna o conteúdo de cada elemento do vetor ( 4, 9 e 13).
+
+int main(){
+  int vet[] = {4,9,13};
+  int i;
+  for(i=0;i<3;i++){
+  printf("%X ",vet+i);
+  }
+}
+
+//O código acima retorna o endereço de cada elemento do vetor.

@@ -1,0 +1,9 @@
+*(pulo + 2);
+*(pulo + 4);
+pulo + 4;
+pulo + 2;
+
+
+Apenas a expressão *(pulo + 2); referencia o valor do terceiro elemento do vetor pulo.
+
+
