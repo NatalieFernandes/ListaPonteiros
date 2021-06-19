@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void soma(int *r,int *a,int *b,int n){//função de soma de vetores
+r = (int *)malloc(n*sizeof(int));
+    for(int i=0;i<n;i++){
+        *(r+i) = *(a+i) + *(b+i);
+    }
+      free(r);
+}
+
+int main()
+{
+    int *v1, *v2, p, *m;
+    printf("qual o tamanho do vetor?");
+    scanf("%d",&p);
+    printf("digite os numeros do primeiro vetor\n");
+     v1 = (int *)malloc(p*sizeof(int));
+    for(int i=0; i<p; i++){
+    scanf("%d",(v1+i));
+}
+    printf("digite os numeros do segundo vetor\n");
+     v1 = (int *)malloc(p*sizeof(int));
+    for(int j=0; j<p; j++){
+    scanf("%d",(v2+j));
+}
+    
+    soma(m, v1, v2, p);
+    printf("O vetor r resultante eh: ");
+    for(int k=0;k<p;k++){
+     printf("%d ",*(m+k));
+  }
+
+  free(v1);
+  free(v2);
+  
+    return 0;
+}

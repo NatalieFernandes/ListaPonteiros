@@ -1,0 +1,24 @@
+#include <stdio.h>      
+#include <stdlib.h>     
+
+int compare (const void * a, const void * b)
+{
+  return ( *(int*)a - *(int*)b );
+}
+
+int main(){
+  int *v,n,i;//criando as variáveis que serão utilizadas
+  printf("digite a quantidade de numeros "); //imprimindo na tela "digite a quantidade de numeros"
+  scanf("%d",&n);//solicitao para o usuario o tamanho do vetor (quantos numeros ele deseja digitar para comparar)
+  v = (int *)malloc(n*sizeof(int));//reservando espaço para o vetor v com alocação dinâmica
+  for(i=0;i<n;i++){
+     scanf("%d",(v+i));//inserindo elementos no vetor
+  }
+  qsort(v,n,sizeof(int),compare);//chamada da função qsort
+  printf("\nEm ordem crescente:\n");//imprimindo na tela "Em ordem crescente:"
+  for(i=0;i<n;i++){
+     printf("%d ",*(v+i));//imprimindo os elementos ordenados pela função qsort;
+  }
+  free(v);//liberando o espaço ocupado pelo vetor;
+  return 0;
+}

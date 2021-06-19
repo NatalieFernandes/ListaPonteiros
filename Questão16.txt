@@ -1,0 +1,5 @@
+Utilizando-se a função clock() da biblioteca time.h para tirar a diferença entre o tempo de inicio e de termino de execução das funções qsort e ordenaVet foi observado que não há diferença significativa quando se trata de valores pequenos para ordenar. entretanto, quando são utilizados valores grandes já se observa uma diferença entre o tempo de execução das funções.
+
+
+Tempo do qsort: 0.000000 segundos
+Tempo da funcao ordenaVet: 0.286000 segundos

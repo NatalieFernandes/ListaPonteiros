@@ -1,0 +1,37 @@
+#include <stdio.h>      
+#include <stdlib.h>
+
+void ordene (int *p, int n){
+int i, j, aux;
+  for(i=0;i<n;i++){
+     int aux;
+  for(int j=0;j<n;j++){
+        if(*(p+i)<*(p+j)){
+        aux=*(p+i);
+        *(p+i)=*(p+j);
+        *(p+j)=aux;
+    }
+  }
+}
+printf("\nEm ordem crescente:");
+for(i=0;i<n;i++){
+   printf("%d ",*(p+i));
+}
+}
+int main(){
+  int *p,n,i;
+  printf("digite a quantidade de numeros ");
+  scanf("%d",&n);
+  printf("digite os numeros que deseja ordenar\n");
+  p = (int *)malloc(n*sizeof(int));
+  for(i=0;i<n;i++){
+     scanf("%d",(p+i));
+  }
+  printf("Numeros escolhidos:");
+  for(i=0;i<n;i++){
+     printf("%d ",*(p+i));
+  }
+ordene(p,n);
+free(p);
+return 0;
+}
