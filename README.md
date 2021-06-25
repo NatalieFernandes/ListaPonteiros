@@ -1,2 +1,4 @@
 # ListaPonteiros
-Natalie Fernanda Fernandes - 	20210072889
+DCA1202 - PROGRAMAÇAO AVANÇADA - T01 
+Aluna: Natalie Fernanda Fernandes 
+Matrícula: 20210072889
