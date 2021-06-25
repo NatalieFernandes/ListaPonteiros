@@ -1,63 +1,63 @@
 #include<stdio.h>
 #include<stdlib.h>
-void MultiplicaMatriz(int *r,int *a,int *b,int nca,int nla,int ncb)
+void MultiplicaMatriz(int *r,int *x,int *y,int ncx,int nlx,int ncy)
 {
-    for(int i=0; i<nla; i++) //sinaliza a linha da matriz r
+    for(int i=0; i<nlx; i++) 
     {
-        for(int j=0; j<ncb; j++) //sinaliza a coluna da matriz r
+        for(int j=0; j<ncy; j++)
         {
-            *(r+j+i*ncb)=0;//inicializa o elemento da matriz r como 0 para possibilitar futura soma de valores
-            for(int k=0; k<nca; k++) //possibilita se movimentar na matriz com a coluna e linha estáticas
+            *(r+j+i*ncy)=0;
+            for(int k=0; k<ncx; k++) 
             {
-                *(r+j+i*ncb)+=(*(a+k+i*nca))*(*(b+k*ncb+j));//a multiplcação dos termos e a soma das multiplicações
+                *(r+j+i*ncy)+=(*(x+k+i*ncx))*(*(y+k*ncy+j));
             }
         }
     }
 }
 int main()
 {
-    int nca=3,nla=5,ncb=2;
-    int *a,*b,*c;
-    a=(int *)malloc(nla*nca*(sizeof(int)));//reserva espaço na memoria para a matriz a
-    b=(int *)malloc(ncb*nca*(sizeof(int)));//reserva espaço na memoria para a matriz b
-    c=(int *)malloc(ncb*nla*(sizeof(int)));//reserva espaço na memoria para a matriz c
-    for(int i=0; i<nla; i++)
+    int ncx=3,nlx=5,ncy=2;
+    int *x,*y,*z;
+    x=(int *)malloc(nlx*ncx*(sizeof(int)));
+    y=(int *)malloc(ncy*ncy*(sizeof(int)));
+    z=(int *)malloc(ncy*nlx*(sizeof(int)));
+    for(int i=0; i<nlx; i++)
     {
-        for(int j=0; j<nca; j++)
+        for(int j=0; j<ncx; j++)
         {
-            *(a+j+i*nca)=i+j;
-        }//inicializa matriz a
-    }
-    for(int i=0; i<nca; i++)
-    {
-        for(int j=0; j<ncb; j++)
-        {
-            *(b+j+i*ncb)=i+j;
-        }//inicializa matriz b
-    }
-    MultiplicaMatriz(c,a,b,nca,nla,ncb);//chama a função de multiplicar matrizes, multipicando a matriz a pela matriz b
-    for(int i=0; i<nla; i++) //exibe matriz a
-    {
-        printf("\n");
-        for(int j=0; j<nca; j++)
-        {
-            printf("%d",*(a+j+i*nca));
+            *(x+j+i*ncx)=i+j;
         }
     }
-    for(int i=0; i<nca; i++) //exibe matriz b
+    for(int i=0; i<ncx; i++)
     {
-        printf("\n");
-        for(int j=0; j<ncb; j++)
+        for(int j=0; j<ncy; j++)
         {
-            printf("%d",*(b+j+i*ncb));
+            *(y+j+i*ncy)=i+j;
         }
     }
-    for(int i=0; i<nla; i++) //exibe matriz c
+    MultiplicaMatriz(z,x,y,ncx,nlx,ncy);
+    for(int i=0; i<nlx; i++) 
     {
         printf("\n");
-        for(int j=0; j<ncb; j++)
+        for(int j=0; j<ncx; j++)
         {
-            printf("%d",*(c+j+i*ncb));
+            printf("%d",*(x+j+i*ncx));
+        }
+    }
+    for(int i=0; i<ncx; i++) 
+    {
+        printf("\n");
+        for(int j=0; j<ncy; j++)
+        {
+            printf("%d",*(y+j+i*ncy));
+        }
+    }
+    for(int i=0; i<nlx; i++)
+    {
+        printf("\n");
+        for(int j=0; j<ncy; j++)
+        {
+            printf("%d",*(z+j+i*ncy));
         }
     }
     return 0;

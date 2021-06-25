@@ -6,7 +6,7 @@ int main(){
   }
 }
 
-//O código acima retorna o conteúdo de cada elemento do vetor ( 4, 9 e 13).
+//----O código acima retorna o conteúdo de cada elemento do vetor ( 4, 9 e 13).----
 
 int main(){
   int vet[] = {4,9,13};
@@ -16,4 +16,4 @@ int main(){
   }
 }
 
-//O código acima retorna o endereço de cada elemento do vetor.
+//---código acima retorna o endereço de cada elemento do vetor.---

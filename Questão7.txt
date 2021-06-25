@@ -1,4 +1,4 @@
- p= mat +1; // expressão válida, pois mostra o endereço do segundo elemento o vetor;
- p = mat++; //expressão inválida, pois não é possível alterar o endereço do vetor;
- p = ++mat; // expressão inválida, pois não é possível alterar o endereço do vetor;
- x = (*mat)++; // expressão válida, retorna o conteúdo da posição do vetor incrementado em uma unidade;
+ p= mat +1; // ---expressão válida, uma vez que mostra o endereço do segundo elemento o vetor;
+ p = mat++; //---expressão inválida, pq nao é possível alterar o endereço do vetor;
+ p = ++mat; // --- expressão inválida, pq nao é possível alterar o endereço do vetor;
+ x = (*mat)++; // expressão válida, ja que retorna o conteúdo da posição do vetor incrementado em uma unidade;

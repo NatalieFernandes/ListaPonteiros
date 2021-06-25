@@ -1,13 +1,13 @@
 Ponteiros para função guardam endereço de áreas de código. O uso de ponteiros para funções em C serve principalmente para definir, em tempo de execução, qual função será executada, sem a necessidade de escrever o nome da função, de forma explícita naquele ponto do código.
 
-int soma (int x, int y){
-	return x+y;
+int soma (int a, int b){
+	return a+b;
 }
 
 int main (void){
-int x = 3, y = 4;
+int a = 3, b = 4;
 
-int (*pf) (int) = soma(x,y); // ponteiro para função soma
+int (*pf) (int) = soma(a,b); 
 printf("soma = %d", pf);
 
   return 0;

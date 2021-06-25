@@ -8,7 +8,7 @@ q = *p;
 i = (*p)++ + *q;
 
 
-São inválidas:
+---São inválidas:---
 p = i;
 i = (*&)j;
 q = *p;

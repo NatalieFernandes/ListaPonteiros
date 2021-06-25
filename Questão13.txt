@@ -13,25 +13,26 @@ int i, j, aux;
     }
   }
 }
-printf("\nEm ordem crescente:");
-for(i=0;i<n;i++){
-   printf("%d ",*(p+i));
+		printf("\nEm ordem crescente:");
+		for(i=0;i<n;i++){
+   		printf("%d ",*(p+i));
+			}
 }
-}
+
 int main(){
-  int *p,n,i;
-  printf("digite a quantidade de numeros ");
-  scanf("%d",&n);
-  printf("digite os numeros que deseja ordenar\n");
+  int *p,k,i;
+ 	 printf("digite a qntde de numeros ");
+  	scanf("%d",&k);
+ 	 printf("digite os nros que deseja ordenar\n");
   p = (int *)malloc(n*sizeof(int));
-  for(i=0;i<n;i++){
-     scanf("%d",(p+i));
-  }
-  printf("Numeros escolhidos:");
-  for(i=0;i<n;i++){
-     printf("%d ",*(p+i));
-  }
-ordene(p,n);
+  	for(i=0;i<k;i++){
+    	 scanf("%d",(p+i));
+ 	 }
+ 	 printf("Numeros escolhidos sao:");
+ 	 	for(i=0;i<k;i++){
+    		 printf("%d ",*(p+i));
+ 		 }
+ordene(p,k);
 free(p);
 return 0;
 }

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void soma(int *r,int *a,int *b,int n){//função de soma de vetores
+void soma(int *r,int *a,int *b,int n){
 r = (int *)malloc(n*sizeof(int));
     for(int i=0;i<n;i++){
         *(r+i) = *(a+i) + *(b+i);

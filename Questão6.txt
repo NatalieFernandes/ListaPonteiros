@@ -4,6 +4,6 @@ pulo + 4;
 pulo + 2;
 
 
-Apenas a expressão *(pulo + 2); referencia o valor do terceiro elemento do vetor pulo.
+Apenas a expressão *(pulo + 2); esta expessão referencia o valor do terceiro elemento do vetor pulo.
 
 
