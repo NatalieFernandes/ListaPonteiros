@@ -5,20 +5,19 @@ int compare(int *a,int *b)
 {
     return *a - *b;
 }
-void ordenaVet(int *vet,int qtd,int (*comparacao)(int *a,int *b)) //função de ordenação 
+void ordenaVet(int *v1,int qt,int (*comparacao)(int *a,int *b)) //função de ordenação 
 {
     //a quantidade de elementos e um ponteiro para função;
-    int aux,i,j;
-    for(i=0; i<qtd; i++)
+    int aux,i,k;
+    for(i=0; i<qt; i++)
     {
-        for(j=0; j<qtd; j++)
+     for(k=0; k<qt; k++)
         {
-            if(comparacao(vet+i,vet+j)<0) //utiliza a fução de comparação para ver se o elemento em v+i é menor do que o
+      if(compare(v1+i,v1+k)<0) 
             {
-                //elemento em v+j
-                aux = *(vet+i);//utiliza a variável auxiliar para auxiliar na troca des valores;
-                *(vet+i)=*(vet+j);
-                *(vet+j)=aux;
+               aux = *(v1+i);
+                *(v1+i)=*(v1+k);
+                *(v1+k)=aux;
             }
        }
     }
@@ -34,11 +33,11 @@ int main()
     {
         scanf("%d",(v+i));
     }
-    ordenaVet(v,n,comp); //chamada da função ordenaVet usando um ponteiro para a funçao de comparação
+    ordenaVet(v,n,comp); 
     printf("\nEm ordem crescente:\n");
     for(i=0; i<n; i++)
     {
-        printf("%d ",*(v+i));//mostrando elementos ordenados pela função ordenaVet;
+        printf("%d ",*(v+i));
     }
     free(v);
     return 0;
