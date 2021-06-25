@@ -39,21 +39,21 @@ int main(void){
 // saída:
 //x for declarado como char
 //endereco da posicao x = 6422044
-//endereco da posicao x = 6422045
-//endereco da posicao x = 6422046
-//endereco da posicao x = 6422047
+//endereco da posicao x+1 = 6422045
+//endereco da posicao x+2 = 6422046
+//endereco da posicao x+3 = 6422047
 //x for declarado como int
 //endereco da posicao x = 6422036
-//endereco da posicao x = 6422038
-//endereco da posicao x = 6422040
-//endereco da posicao x = 6422042
+//endereco da posicao x+1 = 6422038
+//endereco da posicao x+2 = 6422040
+//endereco da posicao x+3 = 6422042
 //x for declarado como float
 //endereco da posicao x = 6422016
-//endereco da posicao x = 6422020
-//endereco da posicao x = 6422024
-//endereco da posicao x = 6422028
+//endereco da posicao x+1 = 6422020
+//endereco da posicao x+2 = 6422024
+//endereco da posicao x+3 = 6422028
 //x for declarado como double
 //endereco da posicao x = 6421984
-//endereco da posicao x = 6421992
-//endereco da posicao x = 6422000
-//endereco da posicao x = 6422008
+//endereco da posicao x+1 = 6421992
+//endereco da posicao x+2 = 6422000
+//endereco da posicao x+3 = 6422008
